@@ -1,3 +1,5 @@
+import sys
+import os
 
 
 def fibonacci(n):
@@ -14,11 +16,13 @@ def fibonacci(n):
 
 
 def solution(n):
-    # Solution 
+    # Solution
     return fibonacci(n)
 
 
 if __name__ == "__main__":
-    n = int(input())
+    if len(sys.argv) <= 1:
+        sys.exit(os.error("Argment required"))
 
+    n = int(sys.argv[1])
     print(solution(n))

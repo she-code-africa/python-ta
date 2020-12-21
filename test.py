@@ -1,37 +1,35 @@
+
 import unittest
-import app
 
-testcase_input_folder = "./testcase/input/"
-testcase_output_folder = "./testcase/output/"
+from src import app
 
+class Test(unittest.TestCase):
+    def test_str_uppercase(self):
+        """
+        Test the string for uppercase
+        """
+        output = "foo".upper()
+        expected = "FOO"
+        self.assertEqual(output, expected)
 
-def get_testcase_file(file):
-    if "input" in file:
-        return testcase_input_folder + str(file)
-    else:
-        return testcase_output_folder + str(file)
+    def test_input_10(self):
+        """
+        Testcase 0
+        """
+        input = 10
+        output = app.solution(input)
+        expected = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+        self.assertEqual(output, expected)
 
-
-def get_testcase_data(fd):
-    f = open(get_testcase_file(fd), "r+")
-    out = f.read()
-    f.close()
-
-    return out
-
-
-class TestAppSolution(unittest.TestCase):
-
-    def test_upper(self):
-        self.assertEqual('foo'.upper(), 'FOO')
-
-    def test_testcase_0(self):
-        n = get_testcase_data("input0.txt")
-        output = get_testcase_data("output0.txt")
-
-        solution_output = app.solution(int(n))
-
-        self.assertEqual(str(solution_output), str(output))
+    def test_input_60(self):
+        """
+        Testcase 1
+        """
+        input = 60
+        output = app.solution(input)
+        expected = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, 267914296, 433494437, 701408733, 1134903170, 1836311903, 2971215073, 4807526976, 7778742049, 12586269025, 20365011074, 32951280099, 53316291173, 86267571272, 139583862445, 225851433717,
+                    365435296162, 591286729879, 956722026041]
+        self.assertEqual(output, expected)
 
 
 if __name__ == "__main__":
