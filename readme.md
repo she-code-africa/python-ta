@@ -12,10 +12,6 @@ Please perform the following instructions.
 * Push your update to your repository.
 * Submit your repository URL on the provided google form.
 
-## Problem Set
-
-Write the algorithm for a Fibonacci function that receives an arguments n and return an array containing the fibonacci squence starting from the zero index.
-
 ## Structure
 
 The directory structure of this template

@@ -12,24 +12,52 @@ class Test(unittest.TestCase):
         expected = "FOO"
         self.assertEqual(output, expected)
 
-    def test_input_10(self):
+    def test_case0(self):
         """
         Testcase 0
         """
-        input = 10
+        input = "wow"
         output = app.solution(input)
-        expected = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
-        self.assertEqual(output, expected)
+        self.assertEqual(output, True)
 
-    def test_input_60(self):
+    def test_case1(self):
         """
         Testcase 1
         """
-        input = 60
+        input = "random string"
         output = app.solution(input)
-        expected = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418, 317811, 514229, 832040, 1346269, 2178309, 3524578, 5702887, 9227465, 14930352, 24157817, 39088169, 63245986, 102334155, 165580141, 267914296, 433494437, 701408733, 1134903170, 1836311903, 2971215073, 4807526976, 7778742049, 12586269025, 20365011074, 32951280099, 53316291173, 86267571272, 139583862445, 225851433717,
-                    365435296162, 591286729879, 956722026041]
-        self.assertEqual(output, expected)
+        self.assertEqual(output, False)
+
+    def test_case2(self):
+        """
+        Testcase 2
+        """
+        input = "wassamassaw"
+        output = app.solution(input)
+        self.assertEqual(output, True)
+
+
+    def test_case3(self):
+        """
+        Testcase 3
+        """
+        input = "satanoscillatemymetallicsonatas"
+        output = app.solution(input)
+        self.assertEqual(output, True)
+
+    def test_case4(self):
+        """
+        Testcase 4
+        """
+        input = "in girum imus nocte et consumimur igni"
+        output = app.solution(input)
+        self.assertEqual(output, True)
+
+    def test_case5(self):
+        "Testcase 5"
+        input = "No lemoned, no melon"
+        output = app.solution(input)
+        self.assertEqual(output, False)
 
 
 if __name__ == "__main__":
