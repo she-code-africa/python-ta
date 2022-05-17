@@ -2,15 +2,15 @@ import sys
 import os
 
 
-def palindrome(s):
+def prime(s):
     # your code goes here
 
 def solution(s):
-    return palindrome(s)
+    return prime(s)
 
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        sys.exit(os.error("Argment required"))
+        sys.exit(os.error("Argument required"))
 
     print(solution(sys.argv[1]))

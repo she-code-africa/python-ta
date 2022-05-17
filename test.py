@@ -4,19 +4,19 @@ import unittest
 from src import app
 
 class Test(unittest.TestCase):
-    def test_str_uppercase(self):
-        """
-        Test the string for uppercase
-        """
-        output = "foo".upper()
-        expected = "FOO"
-        self.assertEqual(output, expected)
+    # def test_str_uppercase(self):
+    #     """
+    #     Test the string for uppercase
+    #     """
+    #     output = "foo".upper()
+    #     expected = "FOO"
+    #     self.assertEqual(output, expected)
 
     def test_case0(self):
         """
         Testcase 0
         """
-        input = "wow"
+        input = 2
         output = app.solution(input)
         self.assertEqual(output, True)
 
@@ -24,7 +24,7 @@ class Test(unittest.TestCase):
         """
         Testcase 1
         """
-        input = "random string"
+        input = 24
         output = app.solution(input)
         self.assertEqual(output, False)
 
@@ -32,7 +32,7 @@ class Test(unittest.TestCase):
         """
         Testcase 2
         """
-        input = "wassamassaw"
+        input = 37
         output = app.solution(input)
         self.assertEqual(output, True)
 
@@ -41,7 +41,7 @@ class Test(unittest.TestCase):
         """
         Testcase 3
         """
-        input = "satanoscillatemymetallicsonatas"
+        input = 73
         output = app.solution(input)
         self.assertEqual(output, True)
 
@@ -49,13 +49,13 @@ class Test(unittest.TestCase):
         """
         Testcase 4
         """
-        input = "in girum imus nocte et consumimur igni"
+        input = 56
         output = app.solution(input)
         self.assertEqual(output, True)
 
     def test_case5(self):
         "Testcase 5"
-        input = "No lemoned, no melon"
+        input = 97
         output = app.solution(input)
         self.assertEqual(output, False)
 

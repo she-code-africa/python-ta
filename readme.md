@@ -38,7 +38,7 @@ def solution(n):
 
 if __name__ == "__main__":
     if len(sys.argv) <= 1:
-        sys.exit(os.error("Argment required"))
+        sys.exit(os.error("Argument required"))
 
     n = int(sys.argv[1])
     print(solution(n))
